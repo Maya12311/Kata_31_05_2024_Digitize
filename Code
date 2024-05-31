@@ -1,0 +1,19 @@
+public class Solution{
+  public static int[] digitize(int n){
+      if(n<10) return new int[]{n}; 
+
+     int count = 0; 
+     int digits=n;
+  while(digits!=0 ){
+  digits= digits/10; 
+  count++; 
+}
+    int[] answer = new int[count];  
+    for(int i = 0;i < answer.length ;i++ ){
+    answer[count-1] = n%10; 
+    count--; 
+    n=n/10; 
+}    
+    return answer;
+  }
+}
